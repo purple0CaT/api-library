@@ -60,7 +60,10 @@ export default Vue.extend({
     &:hover {
       transform: scale(1.04);
       text-decoration: none;
-      box-shadow: 0 6px 10px grey;
+      //   box-shadow: 0 6px 10px grey;
+      background-color: white !important;
+      color: black;
+      animation: 1.6s linear infinite btnShadow;
     }
     &:active {
       transform: scale(1);
@@ -71,6 +74,17 @@ export default Vue.extend({
     color: black !important;
     box-shadow: 0 5px 10px grey !important;
     background-color: white !important;
+  }
+}
+@keyframes btnShadow {
+  0% {
+    box-shadow: 0 5px 8px grey;
+  }
+  50% {
+    box-shadow: 0 6px 10px rgb(63, 143, 175);
+  }
+  100% {
+    box-shadow: 0 5px 8px grey;
   }
 }
 // Logo
@@ -91,7 +105,7 @@ export default Vue.extend({
     filter: drop-shadow(0px 10px 5px #44ddc4);
   }
   75% {
-    filter: drop-shadow(-5px 5px 5px #446ddd);
+    filter: drop-shadow(-5px 5px 5px #dd44dd);
   }
   100% {
     filter: drop-shadow(0px 0px 5px #dd4444);

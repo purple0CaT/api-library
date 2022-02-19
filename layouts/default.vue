@@ -1,7 +1,9 @@
 <template>
   <div>
     <NavBar />
-    <Nuxt />
+    <main class="container">
+      <Nuxt />
+    </main>
   </div>
 </template>
 
@@ -29,9 +31,16 @@ export default {
 body {
   margin: 0;
   min-height: 100vh;
-  background-color: rgb(239, 243, 247);
+  background-color: #e5e9ee;
 }
 .p-1 {
   padding: 0.5rem;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  min-height: calc(100vh - 3rem);
 }
 </style>
