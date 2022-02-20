@@ -6,8 +6,8 @@
       </nuxt-link>
     </div>
     <div class="navBar-links">
-      <nuxt-link to="free" class="btn"><h4>Free API</h4> </nuxt-link>
-      <nuxt-link to="registered" class="btn"> <h4>More API</h4></nuxt-link>
+      <nuxt-link to="free" class="btn"><h5>Free API</h5> </nuxt-link>
+      <nuxt-link to="registered" class="btn"> <h5>More API</h5></nuxt-link>
     </div>
   </nav>
 </template>
@@ -22,6 +22,8 @@ export default Vue.extend({
 
 <style scope lang="scss">
 .nav-bar {
+  position: sticky;
+  top: 0;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -54,8 +56,9 @@ export default Vue.extend({
     transition: 0.1s;
     cursor: pointer;
     //
-    & h4 {
+    & h5 {
       margin: 0;
+      font-weight: 400;
     }
     &:hover {
       transform: scale(1.04);

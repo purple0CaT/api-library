@@ -1,9 +1,7 @@
 <template>
   <div>
     <NavBar />
-    <main class="container">
-      <Nuxt />
-    </main>
+    <Nuxt />
   </div>
 </template>
 
@@ -39,7 +37,7 @@ body {
 .container {
   display: flex;
   justify-content: center;
-  align-items: center;
+  // align-items: center;
   padding: 1rem;
   min-height: calc(100vh - 3rem);
 }
