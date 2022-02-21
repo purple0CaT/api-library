@@ -3,10 +3,9 @@
     <b-row class="w-100">
       <b-col md="8">
         <div class="about_card section_card">
-          <h1>Fast and eficient way to learn API</h1>
+          <h1>Fast and efficient way to learn API's</h1>
           <h4 class="font-italic">
-            We are providing a simple solution to learn how to interact with
-            API's for junior engineers
+            A simple solution to interact with API's for junior engineers
           </h4>
           <h5>
             Just <strong>copy</strong> and <strong>paste</strong> link right
@@ -15,16 +14,16 @@
         </div>
       </b-col>
       <b-col md="4" class="d-flex align-items-center">
-        <div class="section_card code_card">
+        <form @submit.prevent="handleCopy" class="section_card code_card">
           <code
             ><input
-              ref="copy_code"
               readonly
               type="text"
+              name="code"
               value="https://sometestapi.com/api/dogs"
           /></code>
-          <button @click="handleCopy">copy</button>
-        </div>
+          <button type="submit">copy</button>
+        </form>
       </b-col>
     </b-row>
   </section>
@@ -34,31 +33,31 @@
 import Vue from 'vue'
 export default Vue.extend({
   methods: {
-    handleCopy() {
-      navigator.clipboard.writeText(this.$refs.copy_code!.value)
-      this.$refs.copy_code!.focus()
-      //   navigator.clipboard.writeText(this.$refs.copy_code)
+    handleCopy(submitEvent: any) {
+      navigator.clipboard.writeText(submitEvent.target.elements.code.value)
+      submitEvent.target.elements.code.focus()
     },
   },
 })
 </script>
 
-<style lang="scss">
+<style scoped lang="scss">
+$lightBg: rgba(247, 247, 247, 0.7);
 .home_wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
   height: calc(100vh - 3rem);
-  background: url('https://imgur.com/2Z8ZOx0.jpg') center center no-repeat,
-    #a4c5e0;
+  background: url('/globe.png') center no-repeat;
   background-size: cover;
 }
 
 .section_card {
+  box-sizing: border-box !important;
   padding: 1rem;
-  background-color: rgba(247, 247, 247, 0.774);
+  background-color: $lightBg;
   margin: 1rem 0;
-  box-shadow: 0 2px 5px rgb(255, 255, 255);
+  box-shadow: 0 0 15px $lightBg;
   width: 100%;
   //
   & h4,
@@ -71,12 +70,13 @@ export default Vue.extend({
 }
 .code_card {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   gap: 1rem;
+  min-height: 5rem;
   //
   & code {
-    width: 100%;
+    width: 80%;
   }
   & input {
     width: -webkit-fill-available;
@@ -85,17 +85,27 @@ export default Vue.extend({
     background-color: unset;
   }
   & button {
+    display: block;
+    position: relative;
+    padding: 0.1rem 0.6rem;
+    margin: 0 !important;
     border: unset;
+    border-radius: 5px;
     box-shadow: 0 0 4px grey;
     background-color: white;
     transition: 0.1s ease-in-out;
+    border: 2px solid transparent;
     &:hover {
       transform: scale(1.05);
       box-shadow: 0 0 7px grey;
     }
     &:active {
-      transform: scale(0.98);
+      transform: scale(1);
       box-shadow: 0 0 2px grey;
+    }
+    &:focus {
+      box-sizing: border-box !important;
+      border: 2px solid rgb(0, 138, 192) !important;
     }
   }
 }

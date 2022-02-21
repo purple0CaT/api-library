@@ -1,0 +1,104 @@
+<template>
+  <b-col md="6" class="d-flex align-items-center"
+    ><div class="section_card code_card">
+      <h1>Dogs API</h1>
+      <form @submit.prevent="handleCopy" class="code-input-copy">
+        <code
+          ><input
+            readonly
+            name="code"
+            type="text"
+            value="https://sometestapi.com/api/dogs"
+        /></code>
+        <button type="submit">copy</button>
+      </form>
+      <h4 style="font-weight: lighter">Response:</h4>
+      <pre class="code-res-bg">
+          <code style="white-space: break-spaces"
+            >
+            <span>[{</span>
+              <span>"id": number,</span>
+              <span>"name": "string",</span>
+              <span>"type": "string",</span>
+              <span>"legs": number,</span>
+              <span>"tail": boolean</span>
+            <span>}, ...]</span>
+          </code>
+          </pre>
+    </div></b-col
+  >
+</template>
+
+<script lang="ts">
+import Vue from 'vue'
+export default Vue.extend({
+  methods: {
+    handleCopy(submitEvent: any) {
+      navigator.clipboard.writeText(submitEvent.target.elements.code.value)
+      submitEvent.target.elements.code.focus()
+    },
+  },
+})
+</script>
+
+<style lang="scss" scoped>
+$lightBg: rgba(247, 247, 247, 0.95);
+
+.section_card {
+  box-sizing: border-box !important;
+  padding: 1rem;
+  background-color: $lightBg;
+  margin: 1rem 0;
+  box-shadow: 0 0 15px $lightBg;
+  width: 100%;
+  //
+  & h4,
+  h5 {
+    font-weight: lighter;
+  }
+}
+.code_card {
+  & .code-input-copy {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    & code {
+      width: 80%;
+    }
+    & input {
+      width: -webkit-fill-available;
+      border: unset;
+      color: unset;
+      background-color: unset;
+    }
+    & button {
+      display: block;
+      position: relative;
+      padding: 0.1rem 0.6rem;
+      margin: 0 !important;
+      border: unset;
+      border-radius: 5px;
+      box-shadow: 0 0 4px grey;
+      background-color: white;
+      transition: 0.1s ease-in-out;
+      border: 2px solid transparent;
+      &:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 7px grey;
+      }
+      &:active {
+        transform: scale(1);
+        box-shadow: 0 0 2px grey;
+      }
+      &:focus {
+        box-sizing: border-box !important;
+        border: 2px solid rgb(0, 138, 192) !important;
+      }
+    }
+  }
+  & .code-res-bg {
+    background-color: rgba(0, 0, 0, 0.767);
+    color: #64e68b;
+  }
+}
+</style>
