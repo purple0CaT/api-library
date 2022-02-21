@@ -42,7 +42,7 @@ export default Vue.extend({
 </script>
 
 <style scoped lang="scss">
-$lightBg: rgba(247, 247, 247, 0.7);
+$lightBg: rgba(255, 255, 255, 0.7);
 .home_wrapper {
   display: flex;
   justify-content: center;

@@ -42,7 +42,7 @@ export default Vue.extend({
 </script>
 
 <style lang="scss" scoped>
-$lightBg: rgba(247, 247, 247, 0.95);
+$lightBg: rgba(255, 255, 255, 0.95);
 
 .section_card {
   box-sizing: border-box !important;
@@ -60,10 +60,13 @@ $lightBg: rgba(247, 247, 247, 0.95);
 .code_card {
   & .code-input-copy {
     display: flex;
+    gap: 0.4rem;
     width: 100%;
     justify-content: space-around;
     & code {
-      width: 80%;
+      display: flex;
+      align-items: center;
+      width: 100%;
     }
     & input {
       width: -webkit-fill-available;
