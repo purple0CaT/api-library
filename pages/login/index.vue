@@ -2,6 +2,7 @@
   <section class="login-section">
     <div class="section-card">
       <form class="form-section" @submit.prevent="">
+        <h3 class="text-center">Login</h3>
         <b-form-group
           id="email"
           label="Email address:"
@@ -75,7 +76,6 @@ export default Vue.extend({
   align-items: center;
   min-height: calc(100vh - 3rem);
   background: url('/brain.png') center no-repeat;
-  background-color: linear-gradient(#e66465, #9198e5);
   background-size: contain;
 }
 </style>

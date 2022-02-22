@@ -22,8 +22,6 @@ export default Vue.extend({
   align-items: center;
   height: calc(100vh - 3rem);
   background: url('/advanced.png') center no-repeat;
-  background-color: linear-gradient(#e66465, #9198e5);
   background-size: cover;
-  
 }
 </style>
