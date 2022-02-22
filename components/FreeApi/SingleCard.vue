@@ -1,14 +1,14 @@
 <template>
   <b-col md="6" class="d-flex align-items-center"
-    ><div class="section_card code_card">
-      <h1>Dogs API</h1>
+    ><div class="section-card code_card">
+      <h1>Animal API</h1>
       <form @submit.prevent="handleCopy" class="code-input-copy">
         <code
           ><input
             readonly
             name="code"
             type="text"
-            value="https://sometestapi.com/api/dogs"
+            value="https://sometestapi.com/api/animal"
         /></code>
         <button type="submit">copy</button>
       </form>
@@ -43,21 +43,10 @@ export default Vue.extend({
 
 <style lang="scss" scoped>
 $lightBg: rgba(255, 255, 255, 0.95);
-
-.section_card {
-  box-sizing: border-box !important;
-  padding: 1rem;
-  background-color: $lightBg;
-  margin: 1rem 0;
-  box-shadow: 0 0 15px $lightBg;
-  width: 100%;
-  //
-  & h4,
-  h5 {
-    font-weight: lighter;
-  }
-}
 .code_card {
+  & h1 {
+    text-align: center;
+  }
   & .code-input-copy {
     display: flex;
     gap: 0.4rem;

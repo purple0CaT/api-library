@@ -2,10 +2,11 @@
   <section class="home_wrapper">
     <b-row class="w-100">
       <b-col md="8">
-        <div class="about_card section_card">
-          <h1>Fast and efficient way to learn API's</h1>
+        <div class="about_card section-card">
+          <h1>Fast and efficient APIs</h1>
           <h4 class="font-italic">
-            A simple solution to interact with API's for junior engineers
+            A simple solution to learn how to interact with APIs or test your
+            projects
           </h4>
           <h5>
             Just <strong>copy</strong> and <strong>paste</strong> link right
@@ -14,13 +15,13 @@
         </div>
       </b-col>
       <b-col md="4" class="d-flex align-items-center">
-        <form @submit.prevent="handleCopy" class="section_card code_card">
+        <form @submit.prevent="handleCopy" class="section-card code_card">
           <code
             ><input
               readonly
               type="text"
               name="code"
-              value="https://sometestapi.com/api/dogs"
+              value="https://sometestapi.com/api/animal"
           /></code>
           <button type="submit">copy</button>
         </form>
@@ -50,20 +51,6 @@ $lightBg: rgba(255, 255, 255, 0.7);
   height: calc(100vh - 3rem);
   background: url('/globe.png') center no-repeat;
   background-size: cover;
-}
-
-.section_card {
-  box-sizing: border-box !important;
-  padding: 1rem;
-  background-color: $lightBg;
-  margin: 1rem 0;
-  box-shadow: 0 0 15px $lightBg;
-  width: 100%;
-  //
-  & h4,
-  h5 {
-    font-weight: lighter;
-  }
 }
 //
 .about_card {
