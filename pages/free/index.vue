@@ -24,7 +24,7 @@ export default Vue.extend({
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: calc(100vh - 3rem);
+  min-height: calc(100vh - 3rem);
   background: url('/circuit.png') center no-repeat;
   background-size: cover;
 }

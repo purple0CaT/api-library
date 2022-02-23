@@ -15,16 +15,18 @@
         </div>
       </b-col>
       <b-col md="4" class="d-flex align-items-center">
-        <form @submit.prevent="handleCopy" class="section-card code_card">
-          <code
-            ><input
-              readonly
-              type="text"
-              name="code"
-              value="https://sometestapi.com/api/animal"
-          /></code>
-          <button type="submit">copy</button>
-        </form>
+        <div class="section-card">
+          <form @submit.prevent="handleCopy" class="code_card">
+            <code
+              ><input
+                readonly
+                type="text"
+                name="code"
+                value="https://sometestapi.com/api/animal"
+            /></code>
+            <button type="submit">copy</button>
+          </form>
+        </div>
       </b-col>
     </b-row>
   </section>
@@ -56,10 +58,9 @@ $lightBg: rgba(255, 255, 255, 0.7);
 
 .code_card {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  gap: 1rem;
-  min-height: 5rem;
+  // gap: 1rem;
   //
   & code {
     width: 80%;
@@ -71,11 +72,7 @@ $lightBg: rgba(255, 255, 255, 0.7);
     background-color: unset;
   }
   & button {
-    display: block;
-    position: relative;
     padding: 0.1rem 0.6rem;
-    margin: 0 !important;
-    border: unset;
     border-radius: 5px;
     color: black !important;
     box-shadow: 0 0 4px grey;
