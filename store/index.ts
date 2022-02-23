@@ -10,6 +10,7 @@ export const state = () => ({
   token: {
     accessToken: '',
   },
+  easter_egg: false,
 })
 
 export const mutations = {
@@ -18,6 +19,13 @@ export const mutations = {
       state.theme_mode = 'dark'
     } else {
       state.theme_mode = 'light'
+    }
+  },
+  handleEasterEgg(state: any) {
+    if (state.easter_egg) {
+      state.easter_egg = false
+    } else {
+      state.easter_egg = true
     }
   },
 }
