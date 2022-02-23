@@ -96,6 +96,7 @@ body {
   & button {
     display: block;
     position: relative;
+    color: black !important;
     padding: 0.1rem 0.6rem;
     margin: 0 !important;
     border: unset;

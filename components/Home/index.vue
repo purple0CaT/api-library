@@ -77,6 +77,7 @@ $lightBg: rgba(255, 255, 255, 0.7);
     margin: 0 !important;
     border: unset;
     border-radius: 5px;
+    color: black !important;
     box-shadow: 0 0 4px grey;
     background-color: white;
     transition: 0.1s ease-in-out;
