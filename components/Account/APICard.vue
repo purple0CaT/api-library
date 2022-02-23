@@ -16,7 +16,6 @@
       <hr class="w-100" />
       <div class="api-example">
         <h3 class="font-weight-light">Example of usage:</h3>
-        <br />
         <PostMethod />
       </div>
     </div>

@@ -6,9 +6,7 @@
     </h1>
     <b-row class="w-100" style="z-index: 10">
       <APICard />
-      <b-col md="6">
-        <div class="section-card"><h1>Account INFO</h1></div>
-      </b-col>
+      <AccountInfo />
     </b-row>
   </section>
 </template>
@@ -16,11 +14,13 @@
 <script lang="ts">
 import Vue from 'vue'
 import { mapState } from 'vuex'
+import AccInfo from '~/components/Account/AccInfo.vue'
 import APICard from '../../components/Account/APICard.vue'
+import AccountInfo from '../../components/Account/AccInfo.vue'
 
 export default Vue.extend({
   name: 'Account',
-  components: { APICard },
+  components: { APICard, AccInfo, AccountInfo },
   computed: {
     ...mapState(['user']),
   },

@@ -4,7 +4,7 @@ export const state = () => ({
     id: 1,
     firstName: 'Ian',
     lastName: 'Shtern',
-    email: 'MyEmail',
+    email: 'email@mail.com',
     api_key: 'asldkjhasd019823lkasd',
   },
   token: {
