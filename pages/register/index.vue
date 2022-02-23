@@ -4,6 +4,46 @@
       <ValidationObserver ref="form">
         <form class="form-section" @submit.prevent="submitForm">
           <h3 class="text-center">Register</h3>
+          <!-- First Name -->
+          <b-form-group
+            id="reg-firstname"
+            label="First name"
+            label-for="reg-firstname"
+          >
+            <ValidationProvider
+              mode="passive"
+              rules="required"
+              v-slot="{ errors }"
+            >
+              <b-form-input
+                id="reg-email"
+                v-model="firstname"
+                type="text"
+                placeholder="Enter your name"
+              ></b-form-input>
+              <span>{{ errors[0] }}</span>
+            </ValidationProvider>
+          </b-form-group>
+          <!--  -->
+          <b-form-group
+            id="reg-lastname"
+            label="Last name"
+            label-for="reg-email"
+          >
+            <ValidationProvider
+              mode="passive"
+              rules="required"
+              v-slot="{ errors }"
+            >
+              <b-form-input
+                id="reg-email"
+                v-model="lastname"
+                type="text"
+                placeholder="Enter your last name"
+              ></b-form-input>
+              <span>{{ errors[0] }}</span>
+            </ValidationProvider>
+          </b-form-group>
           <b-form-group
             id="reg-email"
             label="Email address:"
@@ -98,6 +138,8 @@ export default Vue.extend({
   },
   data() {
     return {
+      firstname: '',
+      lastname: '',
       email: '',
       password: { password: '', confirm: '' },
     }

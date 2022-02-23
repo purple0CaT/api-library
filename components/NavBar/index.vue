@@ -33,6 +33,7 @@ export default Vue.extend({
   padding: 0.5rem 1rem;
   height: 3rem;
   box-shadow: 0 1px 5px grey;
+  z-index: 900;
 }
 .nav-light-theme {
   background-color: white;

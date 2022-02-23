@@ -100,7 +100,7 @@ export default Vue.extend({
     }
   }
   & .moon-btn {
-    filter: drop-shadow(0 0 4px rgb(40, 83, 165));
+    filter: drop-shadow(0 0 6px rgb(34, 111, 255));
     &:hover {
       transform: scale(1.3);
     }

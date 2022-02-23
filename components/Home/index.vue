@@ -3,12 +3,12 @@
     <b-row class="w-100">
       <b-col md="8">
         <div class="about_card section-card">
-          <h1>Fast and efficient APIs</h1>
-          <h4 class="font-italic">
+          <h1 class="font-weight-light">Fast and efficient APIs</h1>
+          <h4 class="font-weight-lighter">
             A simple solution to learn how to interact with APIs or test your
             projects
           </h4>
-          <h5>
+          <h5 class="font-weight-lighter">
             Just <strong>copy</strong> and <strong>paste</strong> link right
             from you, and you ready to fetch your first API call "=>"
           </h5>
@@ -53,8 +53,7 @@ $lightBg: rgba(255, 255, 255, 0.7);
   background-size: cover;
 }
 //
-.about_card {
-}
+
 .code_card {
   display: flex;
   justify-content: space-between;

@@ -1,11 +1,11 @@
 export const state = () => ({
   theme_mode: 'light',
   user: {
-    id: null,
-    firstName: '',
-    lastName: '',
-    email: '',
-    api_key: '',
+    id: 1,
+    firstName: 'Ian',
+    lastName: 'Shtern',
+    email: 'MyEmail',
+    api_key: 'asldkjhasd019823lkasd',
   },
   token: {
     accessToken: '',

@@ -1,17 +1,21 @@
 <template>
   <section class="advanced_api_wrapper">
-    <h1 class="section-header">Advanced APIs</h1>
+    <h1 class="section-header font-weight-light">Advanced APIs</h1>
     <b-row class="w-100">
-      <SingleCard />
+      <PostCard />
+      <UpdateCard />
+      <DeleteCard />
     </b-row>
   </section>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
-import SingleCard from '../../components/AdvancedApi/SingleCard.vue'
+import PostCard from '../../components/AdvancedApi/PostCard.vue'
+import UpdateCard from '../../components/AdvancedApi/UpdateCard.vue'
+import DeleteCard from '../../components/AdvancedApi/DeleteCard.vue'
 export default Vue.extend({
-  components: { SingleCard },
+  components: { PostCard, UpdateCard, DeleteCard },
 })
 </script>
 <style scoped lang="scss">
@@ -20,7 +24,7 @@ export default Vue.extend({
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: calc(100vh - 3rem);
+  min-height: calc(100vh - 3rem);
   background: url('/advanced.png') center no-repeat;
   background-size: cover;
 }

@@ -1,17 +1,20 @@
 <template>
   <section class="free_api_wrapper">
-    <h1 class="section-header">Free APIs</h1>
+    <h1 class="section-header font-weight-light">Free APIs</h1>
     <b-row class="w-100">
       <SingleCard />
+      <GetIdCard />
     </b-row>
   </section>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
-import SingleCard from '../../components/FreeApi/SingleCard.vue'
+import SingleCard from '../../components/FreeApi/GetCard.vue'
+import GetIdCard from '../../components/FreeApi/GetIdCard.vue'
+
 export default Vue.extend({
-  components: { SingleCard },
+  components: { SingleCard, GetIdCard },
 })
 </script>
 

@@ -28,7 +28,7 @@ export default {
 
 <style lang="scss">
 $lightBg: rgba(255, 255, 255, 0.9);
-$darkBg: rgba(82, 82, 82, 0.9);
+$darkBg: rgba(82, 82, 82, 0.95);
 * {
   box-sizing: border-box;
 }
@@ -44,11 +44,7 @@ body {
   padding: 1rem;
   margin: 1rem 0;
   width: 100%;
-  //
-  & h4,
-  h5 {
-    font-weight: lighter;
-  }
+  height: fit-content;
 }
 .light-theme {
   background-color: #dee3e7 !important;
@@ -58,9 +54,11 @@ body {
     box-shadow: 0 0 10px $darkBg;
   }
   & .section-header {
+    border-radius: 15px;
     box-shadow: 0 0 10px $darkBg;
     background-color: $lightBg;
     padding: 0.2rem 1rem;
+    z-index: 10;
   }
 }
 .dark-theme {
@@ -71,9 +69,53 @@ body {
     box-shadow: 0 0 10px $lightBg;
   }
   & .section-header {
+    border-radius: 15px;
     background-color: $darkBg;
     padding: 0.2rem 1rem;
     box-shadow: 0 0 10px $lightBg;
+    z-index: 10;
+  }
+}
+.code-input-copy {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin: 1rem 0;
+  //
+  & code {
+    width: 80%;
+  }
+  & input {
+    width: -webkit-fill-available;
+    color: unset;
+    background-color: unset;
+    border: 1px solid grey;
+    border-radius: 5px;
+  }
+  & button {
+    display: block;
+    position: relative;
+    padding: 0.1rem 0.6rem;
+    margin: 0 !important;
+    border: unset;
+    border-radius: 5px;
+    box-shadow: 0 0 4px grey;
+    background-color: white;
+    transition: 0.1s ease-in-out;
+    border: 2px solid transparent;
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 7px grey;
+    }
+    &:active {
+      transform: scale(1);
+      box-shadow: 0 0 2px grey;
+    }
+    &:focus {
+      box-sizing: border-box !important;
+      border: 2px solid rgb(0, 138, 192) !important;
+    }
   }
 }
 </style>
