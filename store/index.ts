@@ -28,4 +28,7 @@ export const mutations = {
       state.easter_egg = true
     }
   },
+  handleHideEasterEgg(state: any) {
+    state.easter_egg = false
+  },
 }

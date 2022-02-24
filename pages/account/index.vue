@@ -36,10 +36,10 @@ export default Vue.extend({
     ...mapState(['user', 'easter_egg']),
   },
   methods: {
-    ...mapMutations(['handleEasterEgg']),
+    ...mapMutations(['handleEasterEgg','handleHideEasterEgg']),
     showEasterEgg() {
       this.handleEasterEgg()
-      kitt_theme.volume = 0.2
+      kitt_theme.volume = 0.2;
       kitt_theme.currentTime = 0;
       kitt_theme.loop = true
       kitt_theme.play()
@@ -50,13 +50,13 @@ export default Vue.extend({
       this.$router.push('/')
     }
   },
-  destroyed(){
-    this.handleEasterEgg()
+  beforeDestroy(){
+    this.handleHideEasterEgg()
     kitt_theme.pause()
   },
   watch: {
     easter_egg: function (newEgg, oldEgg) {
-      if (!newEgg) {
+      if (!newEgg && this.$route.name ==='account') {
         kitt_theme.pause()
       }
     },
@@ -77,7 +77,6 @@ export default Vue.extend({
   inset: 0 0 0 0;
   z-index: 0;
   background: url(/brain.png) center repeat;
-  // background-size: contain;
   animation: 5s linear infinite bgShadowAnim;
 }
 @keyframes bgShadowAnim {
