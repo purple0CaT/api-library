@@ -41,6 +41,7 @@ export default Vue.extend({
       this.handleEasterEgg()
       kitt_theme.volume = 0.2
       kitt_theme.currentTime = 0;
+      kitt_theme.loop = true
       kitt_theme.play()
     },
   },
@@ -48,6 +49,10 @@ export default Vue.extend({
     if (!this.user.id) {
       this.$router.push('/')
     }
+  },
+  destroyed(){
+    this.handleEasterEgg()
+    kitt_theme.pause()
   },
   watch: {
     easter_egg: function (newEgg, oldEgg) {
