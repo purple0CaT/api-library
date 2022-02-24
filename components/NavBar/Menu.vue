@@ -51,7 +51,7 @@ export default Vue.extend({
   align-items: center;
   gap: 1rem;
 
-  .btn {
+  & .btn {
     height: 1.8rem;
     padding: 0.2rem;
     position: relative;
@@ -76,7 +76,7 @@ export default Vue.extend({
       border-bottom: 3px solid rgb(39, 121, 189) !important;
     }
   }
-  .nuxt-link-exact-active {
+  & .nuxt-link-exact-active {
     animation: 2s linear infinite btnActive;
   }
 }

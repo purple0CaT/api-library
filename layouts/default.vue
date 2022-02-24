@@ -60,6 +60,9 @@ body {
     padding: 0.2rem 1rem;
     z-index: 10;
   }
+  .mobileMenuModal__navigation {
+    background-color: $lightBg;
+  }
 }
 .dark-theme {
   background-color: #686b6d;
@@ -74,6 +77,9 @@ body {
     padding: 0.2rem 1rem;
     box-shadow: 0 0 10px $lightBg;
     z-index: 10;
+  }
+  .mobileMenuModal__navigation {
+    background-color: $darkBg;
   }
 }
 .code-input-copy {

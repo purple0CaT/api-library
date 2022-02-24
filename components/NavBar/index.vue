@@ -4,19 +4,21 @@
     :class="theme_mode === 'light' ? 'nav-light-theme' : 'nav-dark-theme'"
   >
     <Logo />
-    <Menu />
+    <Menu class="pcMenu" />
+    <MobileMenu class="mobileMenu" />
   </nav>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
 import Menu from './Menu.vue'
+import MobileMenu from './MobileMenu.vue'
 import Logo from './Logo.vue'
 import { mapState } from 'vuex'
 
 export default Vue.extend({
   name: 'NavBar',
-  components: { Menu, Logo },
+  components: { Menu, Logo, MobileMenu },
   computed: {
     ...mapState(['theme_mode']),
   },
@@ -28,7 +30,7 @@ export default Vue.extend({
   position: sticky !important;
   top: 0;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   padding: 0.5rem 1rem;
   height: 3rem;
@@ -59,6 +61,18 @@ export default Vue.extend({
   }
   & .nuxt-link-exact-active {
     color: white;
+  }
+}
+.mobileMenu {
+  display: none;
+}
+// Media query
+@media only screen and (max-width: 650px) {
+  .pcMenu {
+    display: none;
+  }
+  .mobileMenu {
+    display: block;
   }
 }
 </style>
