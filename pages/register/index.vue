@@ -2,7 +2,7 @@
   <section class="register-section">
     <div class="section-card">
       <ValidationObserver ref="form">
-        <form class="form-section" @submit.prevent="submitForm">
+        <form class="form-section" @submit.prevent="submitForm" hide-footer>
           <h3 class="text-center">Register</h3>
           <!-- First Name -->
           <b-form-group

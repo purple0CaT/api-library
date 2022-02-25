@@ -3,20 +3,14 @@
     <div class="section-card info-account-card">
       <h1 class="text-center font-weight-light">Account information</h1>
       <hr class="w-100" />
-      <div class="d-flex justify-content-around">
-        <h4 class="font-weight-light">
-          <small>Name:</small> {{ user.firstName }}
-        </h4>
-        <h4 class="font-weight-light">
-          <small>Surname:</small> {{ user.lastName }}
-        </h4>
-      </div>
+      <b-container>
+        <update-init />
+        <update-email />
+        <update-password />
+      </b-container>
       <br />
-      <div class="d-flex justify-content-around">
-        <h4 class="font-weight-light m-0">
-          <small class="text-muted">Email: </small>{{ user.email }}
-        </h4>
-        <b-button size="sm" variant="outline-info">Update Email</b-button>
+      <div class="d-flex justify-content-center">
+        <b-button variant="outline-danger" size="sm">Log Out</b-button>
       </div>
     </div>
   </b-col>
@@ -25,7 +19,11 @@
 <script lang="ts">
 import Vue from 'vue'
 import { mapState } from 'vuex'
+import UpdateEmail from './UpdateEmail.vue'
+import UpdateInit from './UpdateInit.vue'
+import UpdatePassword from './UpdatePassword.vue'
 export default Vue.extend({
+  components: { UpdatePassword, UpdateEmail, UpdateInit },
   name: 'AccountInfo',
   computed: {
     ...mapState(['user']),

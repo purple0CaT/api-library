@@ -11,24 +11,19 @@
         <!-- Menu Header -->
         <div class="menuHeader">
           <Logo />
-          <b-icon
-            class="menu-btn"
-            icon="list"
-            font-scale="2"
-            @click="handleMobileMenu"
-          ></b-icon>
+          <b-icon class="menu-btn" icon="list" font-scale="2"></b-icon>
         </div>
         <!-- Menu Options List -->
         <div class="menu-list">
-          <div>
+          <div class="d-flex justify-content-center">
             <nuxt-link to="free" class="btn"><h6>Free API</h6> </nuxt-link>
           </div>
-          <div>
+          <div class="d-flex justify-content-center">
             <nuxt-link to="advanced" class="btn">
               <h6>Advanced API</h6></nuxt-link
             >
           </div>
-          <div>
+          <div class="d-flex justify-content-center">
             <nuxt-link v-if="user.id" to="account" class="btn">
               <h6>Account</h6></nuxt-link
             >
@@ -80,9 +75,9 @@ export default Vue.extend({
       } else {
         this.showMenu = true
       }
+      console.log('click')
     },
     hideMobileMenu() {
-      this.hideMobileMenu()
       this.showMenu = false
     },
   },

@@ -27,7 +27,7 @@ export default {
 </script>
 
 <style lang="scss">
-$lightBg: rgba(255, 255, 255, 0.9);
+$lightBg: rgba(255, 255, 255, 0.95);
 $darkBg: rgba(82, 82, 82, 0.95);
 * {
   box-sizing: border-box;
